@@ -1,0 +1,87 @@
+@use '../custom' as *;
+@use '../base/mixins' as m;
+
+.preguntas {
+    max-width: 65rem;
+    width: 95%;
+    margin: 10rem auto;
+
+    &__titulo {
+        @include m.heading($veryDarkBlue, 2.5rem);
+    }
+
+    &__texto {
+        @include m.texto($light);
+    }
+
+    &__bloques {
+        padding-top: 5rem;
+    }
+
+    &__bloque {
+        padding: 2rem 0;
+        border-bottom: 1px solid $light;
+
+        &:first-child {
+            @include media-breakpoint-up(md) {
+                border-top: 1px solid $light;
+            }
+        }
+    }
+
+    &__encabezado {
+        cursor: pointer;
+    }
+
+    &__img-rotate {
+        transform: rotate(0deg);
+        transition-property: transform;
+        transition-duration: 500ms;
+    }
+
+    &__img-rotate {
+        transform: rotate(180deg);
+
+        path[stroke="#5267DF"] {
+            stroke: $danger;
+        }
+    }
+
+    &__pregunta {
+        font-size: 1.8rem;
+        color: $veryDarkBlue;
+        transition: color 300ms;
+
+        &:hover {
+            color: $danger;
+        }
+    }
+
+    &__contenido {
+        height: 0;
+        overflow: hidden;
+        transition: height 500ms;
+    }
+
+    &__contenido-activo {
+        height: 15rem;
+    }
+
+    &__respuesta {
+        padding-top: 1rem;
+        color: $light;
+        font-size: 1.5rem;
+    }
+
+    &__btn {
+        background-color: $primary;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+        border: 0;
+        padding: 1rem 1.5rem;
+        border-radius: .5rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        cursor: pointer;
+        margin-top: 5rem;
+    }
+}

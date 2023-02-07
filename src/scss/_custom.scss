@@ -1,0 +1,41 @@
+// Variables
+
+// Media Breakpoints
+$desktopXXL: 1440px;
+
+// Colores
+$softBlue: #5368df;
+$softRed: #fa5757;
+$grayishBlue: #9194a1;
+$veryDarkBlue: #252b46;
+
+// Variables modificadas
+$primary: $softBlue;
+$secondary: $veryDarkBlue;
+$danger: $softRed;
+$light: $grayishBlue;
+
+// Tipografia 
+$font-family-base: 'Rubik', sans-serif;
+$font-size-base: 1.8rem;
+
+// Reset de estilos
+$headings-margin-bottom: 0;
+
+
+// MODAL VARIABLES
+$modal-dialog-margin: 0;
+$modal-content-bg: rgba($veryDarkBlue, .9);
+$modal-header-padding-x: 30px;
+$modal-header-border-color: $grayishBlue;
+$modal-header-border-width: 0;
+
+//GRID
+$grid-gutter-width: 0;
+
+// Inputs 
+$input-focus-border-color: none;
+$input-focus-width: 0;
+
+// Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';

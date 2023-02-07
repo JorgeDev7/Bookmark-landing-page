@@ -1,0 +1,58 @@
+@use '../custom' as *;
+@use '../base/mixins' as m;
+
+.hero {
+    margin-top: 7rem;
+
+    .bg {
+        width: 30rem;
+        height: 15rem;
+        right: 0;
+        bottom: 80rem;
+        z-index: -1000;
+        border-top-left-radius: 20rem;
+        border-bottom-left-radius: 20rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+        .bg {
+            width: 50rem;
+            height: 30rem;
+            bottom: 60rem;
+        }
+    }
+
+    @include m.desktopXXL {
+        .bg {
+            width: 70rem;
+            height: 30rem;
+            bottom: 60rem;
+        }
+    }
+
+    &__heading {
+        @include m.heading($secondary, 3rem);
+
+        @include media-breakpoint-up(lg) {
+            @include m.heading($secondary, 5rem);
+            text-align: start;
+        }
+    }
+
+    &__texto {
+        @include m.texto($light);
+
+        @include media-breakpoint-up(lg) {
+            width: 50rem;
+            text-align: start
+        }
+    }
+
+    &__chrome {
+        @include m.btn($primary, #FFFFFF, $primary);
+    }
+
+    &__firefox {
+        @include m.btn(#e1e1e1, $veryDarkBlue, $light)
+    }
+}

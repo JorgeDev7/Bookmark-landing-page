@@ -1,0 +1,37 @@
+@use '../custom' as *;
+
+@mixin desktopXXL {
+    @media (min-width: $desktopXXL) {
+        @content;
+    }
+}
+
+@mixin heading($colorHeading, $size) {
+    text-align: center;
+    font-size: $size;
+    color: $colorHeading;
+    padding-bottom: 2rem;
+}
+
+@mixin texto($colorText) {
+    text-align: center;
+    color: $colorText;
+}
+
+@mixin btn ($bgc, $color, $borderColor) {
+    background-color: $bgc;
+    color: $color;
+    font-size: 1.5rem;
+    border: 1px solid $borderColor;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 500ms;
+
+    &:hover {
+        background-color: transparent;
+        color: $borderColor;
+    }
+}

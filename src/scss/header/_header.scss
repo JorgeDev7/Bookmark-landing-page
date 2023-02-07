@@ -1,0 +1,23 @@
+@use '../custom' as *;
+@use '../base/mixins' as m;
+
+.navegacion {
+
+    &__ham {
+        cursor: pointer;
+    }
+
+    &__link {
+        color: $veryDarkBlue;
+        font-size: 1.5rem;
+        transition: color 300ms;
+
+        &:hover {
+            color: $danger;
+        }
+
+        &--login {
+            @include m.btn($danger, #FFFFFF, $danger)
+        }
+    }
+}

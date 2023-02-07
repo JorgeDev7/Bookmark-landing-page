@@ -1,0 +1,23 @@
+@use '../custom' as *;
+
+.footer {
+
+    &__item {
+        cursor: pointer;
+        color: $light;
+        transition: color 300ms;
+
+        &:hover {
+            color: $danger;
+        }
+    }
+
+    &__social svg path {
+        cursor: pointer;
+        transition: fill 300ms;
+
+        &:hover {
+            fill: $danger;
+        }
+    }
+}
