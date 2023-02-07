@@ -10948,6 +10948,7 @@ html {
 }
 
 .navegacion__ham {
+  width: 2.5rem;
   cursor: pointer;
 }
 .navegacion__link {
